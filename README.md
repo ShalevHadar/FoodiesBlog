@@ -1,17 +1,22 @@
 
-# TaskyApp, a task to save
+# Foodies Blog, a task to save all your recipes
 
-This project was my first project in react.
+A react app that saves your recipes in a convient location and show your
+everything you want !
+
+The backend dependecies i used:
+Nodejs, cors, dotenv, express, mongoDB, mongoose, nodemon
+and deployment in Atlas.
+
+Frontend was mostly used with React.
 
 ## Useables sources
 
-React & Firebase/Firestore, Bootstrap for react
+Build my own RESTful API deployed in MongoDB atlas.
 
 ### `Used react properties`
 
-Hooks, useStates , props.
-
-![demo:](https://i.imgur.com/K7cExjk.png)
+// waiting for picture / video in the future.
 __________________________________________________________________________________________________________________
 
 # Getting Started with Create React App
