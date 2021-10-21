@@ -7,13 +7,16 @@ export default function Recipes() {
   const [items, setItems] = useState([]);
 
   const url = "http://localhost:5000/posts";
+  
+  const getRecipes = () => {
+    console.log("asd");
+  axios.get(url).then((response) => {
+    setItems(response.data);
+  });}
 
   useEffect(() => {
-    console.log("asd");
-    axios.get(url).then((response) => {
-      setItems(response.data);
-    });
-  }, []);
+    getRecipes();
+    },[])
 
   return (
     <div>

@@ -1,29 +1,36 @@
-import { Container, Grow, Grid } from "@mui/material";
-import Form from "./Form.js";
-import Nav from "./Nav.js";
-import Footer from "./Footer.js";
-import Top from "./Top.js";
-import Recipes from "./Recipes.js";
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+// import Signup from './Signup'
+// import Login from './Login'
+import Dashboard from './Dashboard'
+// import Navigator from './Navigator';
+// import { getAuth, onAuthStateChanged } from '@firebase/auth';
+// import Nav from './Nav';
 
-export default function App() {
 
+function App() {
+//   const [, setUser] = useState()
+
+//   useEffect(() => {
+//     const auth = getAuth();
+//     onAuthStateChanged(auth, user => {
+//       setUser(user);
+//     })
+//   })
 
   return (
-    <div>
-      <Nav />
-      <Top/>
-      <Recipes />
-      <Container>
-        <Grow in>
-          <Container align="center">
-              <Grid item xs={12} sm={6}>
-              <Form />
-              </Grid>
-          </Container>
-        </Grow>
-      </Container>
-      
-      <Footer />
+    <div className="App">
+      <BrowserRouter>
+      {/* <Navigator/> */}
+        <Switch>
+          <Route exact path="/" component={Dashboard} />
+          {/* <Route exact path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/dashboard" component={Dashboard} /> */}
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
+
+export default App;

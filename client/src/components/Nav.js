@@ -1,6 +1,8 @@
 import {
   AppBar,
+  Button,
   createTheme,
+  Link,
   ThemeProvider,
   Toolbar,
   Typography,
@@ -29,10 +31,16 @@ export default function Nav() {
   return (
     <div>
       <ThemeProvider theme={themey}>
-        <AppBar position="relative">
+        <AppBar position="relative" align="center">
           <Toolbar>
-            <Typography variant="h6" color="inherit" noWrap>
-              Foody Blog
+            <Typography m={2} t={3} variant="h6" color="inherit" noWrap>
+            <Button color="inherit">Home</Button>
+            </Typography>
+            <Typography m={2} t={3} variant="h6" color="inherit" noWrap>
+            <Button color="inherit">Login</Button>
+            </Typography>
+            <Typography m={2} t={3} variant="h6" color="inherit" noWrap>
+            <Button color="inherit">SIGNUP</Button>
             </Typography>
           </Toolbar>
         </AppBar>

@@ -17,7 +17,7 @@ export default function Top() {
           <Typography variant="h3" fontWeight='lighter'>Your Food, Our site</Typography>
         </Grid>
         <Grid item md={6} xs={12}>
-          <img src={MainIMG} alt="icon" />
+          <img src={MainIMG} alt="icon" style={{ height: "400px" }} />
         </Grid>
       </Grid>            
         </div>
