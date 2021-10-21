@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 app.options('*', cors())
 
-const CONNECTION_URL = 'mongodb+srv://bete:'+pass+'@cluster0.jxiat.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const CONNECTION_URL = 'mongodb+srv://bete:'+'bete123456'+'@cluster0.jxiat.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
