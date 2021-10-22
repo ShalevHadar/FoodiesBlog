@@ -2,12 +2,11 @@ import {
   AppBar,
   Button,
   createTheme,
-  Link,
   ThemeProvider,
   Toolbar,
   Typography,
 } from "@mui/material";
-
+import HomeIcon from '@mui/icons-material/Home';
 import React from "react";
 
 export default function Nav() {
@@ -33,6 +32,7 @@ export default function Nav() {
       <ThemeProvider theme={themey}>
         <AppBar position="relative" align="center">
           <Toolbar>
+          <HomeIcon />
             <Typography m={2} t={3} variant="h6" color="inherit" noWrap>
             <Button color="inherit">Home</Button>
             </Typography>

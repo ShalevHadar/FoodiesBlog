@@ -13,11 +13,14 @@ export default function Form() {
     selectedFile: null,
   });
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await axios.post(url, recipeData);
-      
     } catch (error) {
       console.log(error.message);
     }
@@ -26,9 +29,9 @@ export default function Form() {
 
   return (
     <div>
-      <Card>
-        <Typography variant="h4" className="texty" align="center">
-          Share you recipe !
+      <Card  variant="outlined" style={{ marginTop: "120px", padding: "20px" }}>
+        <Typography variant="h5" className="texty" align="center">
+          Share your Recipe !
         </Typography>
         <form onSubmit={handleSubmit} align="center">
           <Grid container direction={"column"} spacing={2}>
@@ -60,6 +63,7 @@ export default function Form() {
             </Grid>
             <Grid item>
               <TextField
+                style={{ marginBottom: "30px" }}
                 name="creator"
                 variant="outlined"
                 label="Creator"
@@ -73,17 +77,16 @@ export default function Form() {
           </Grid>
           <FileBase64
             multiple={false}
-            onDone={({base64}) =>
+            onDone={({ base64 }) =>
               setRecipeData({ ...recipeData, selectedFile: base64 })
             }
-            
           />
           <Grid
             container
             align="center"
             alignItems="center"
             justifyContent="center"
-            style={{ minHeight: "10vh" }}
+            style={{ minHeight: "8vh" }}
           >
             <Grid item xs={6}>
               <Button
@@ -91,6 +94,7 @@ export default function Form() {
                 variant="contained"
                 color="primary"
                 type="submit"
+                onClick={refreshPage}
               >
                 Submit Recipe
               </Button>

@@ -19,3 +19,14 @@ export const createPost = async (req,res) => {
         res.status(409).json({message: error.message}) // conflict
     }
 }
+
+export const deletePost = async (req,res) => {
+    
+    const { id } = req.params;
+    const postRecpipes = await PostRecipe.findById(id);
+    try {
+        await postRecpipes.delete();
+    } catch (error) {
+        res.status(409).json({message: error.message}) // conflict
+    }
+}
