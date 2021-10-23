@@ -9,7 +9,7 @@ export default function App() {
 
 
   return (
-    <div>
+    <div style={{paddingTop: "20px"}}>
       <Nav />
       <Top/>
       <Recipes />

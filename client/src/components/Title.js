@@ -1,8 +1,7 @@
-import { Grid, Typography } from "@mui/material";
-import MainIMG from "../imgs/MainIMG.png";
+import { Grid, Typography } from '@mui/material'
+import React from 'react'
 
-
-export default function Top() {
+export default function Title() {
     return (
         <div>
         <Grid
@@ -11,12 +10,9 @@ export default function Top() {
         alignItems="center"
         justifyContent="center"
       >
-        <Grid item md={6} xs={12}>
+        <Grid item md={12} xs={12}>
           <Typography variant="h1" fontWeight='bold' style={{ color: "#E26A2C" }}>Foody</Typography>
           <Typography variant="h3" fontWeight='lighter'>Your Food, Our site</Typography>
-        </Grid>
-        <Grid item md={6} xs={12}>
-          <img src={MainIMG} alt="icon" style={{ height: "400px" }} />
         </Grid>
       </Grid>            
         </div>

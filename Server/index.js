@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose'
 import cors from 'cors';
 import postRoutes from './routes/posts.js'
+import postAuths from './routes/Auths.js'
 
 const app = express();
 // Parse URL-encoded bodies (as sent by HTML forms)
@@ -22,3 +23,4 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
   .catch((error) => console.log(`${error} did not connect`));
 
 app.use('/posts',postRoutes)
+app.use('/users',postAuths)

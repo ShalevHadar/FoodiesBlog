@@ -1,7 +1,5 @@
 TODO:
 
-1. Copy text from content box to nodeJS and identify backspaces.
 2. make text wrap in content in the Box itself - maybe with hover?
-3. Make a Signup/Login using firebase
 4. Create Signup/Login pages and use token 
 5. Replace the key with uid you will create with login

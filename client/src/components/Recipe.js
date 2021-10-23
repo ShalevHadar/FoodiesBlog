@@ -6,31 +6,23 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import axios from "axios";
 
-
-
 export default function Recipes(props) {
-
   const url = "http://localhost:5000/posts/";
-  const [items, setItems] = useState([]);
 
   function refreshPage() {
     window.location.reload(false);
   }
 
-
-  const handleDelete = (event) => {
+  const handleDelete = async (event) => {
     event.preventDefault();
-    
-    axios.delete(url+props._id).then(res => console.log("delete!"))
-  }
-
-
+    await axios.delete(url + props._id).then((res) => console.log("delete!"));
+  };
 
   return (
     <Card
@@ -50,21 +42,26 @@ export default function Recipes(props) {
         <Typography gutterBottom variant="h6" component="div">
           {props.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" style={{whiteSpace: 'pre-wrap'}} rows="1">
           {props.content}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions style={{ display: 'flex', justifyContent: 'space-between'}}>
         <Typography
-          style={{ margin: "0px 20px" }}
+          style={{ padding: "8px " }}
           variant="body2"
           color="text.secondary"
         >
           Created by: {props.creator}
         </Typography>
-        <div style={{ position: "relative" }}>
-          <IconButton onClick={function(e) { handleDelete(e); refreshPage(); }}>
-            <DeleteIcon  style={{ color: "#E26A2C" }} />
+        <div >
+          <IconButton
+            onClick={function (e) {
+              handleDelete(e);
+              refreshPage();
+            }}
+          >
+            <DeleteIcon style={{ color: "#E26A2C" }} />
           </IconButton>
           <IconButton>
             <EditIcon style={{ color: "#E26A2C" }} />

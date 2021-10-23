@@ -50,14 +50,17 @@ export default function Form() {
             <Grid item>
               <TextField
                 multiline
+                style={{whiteSpace: 'pre-line'}}
                 rows={5}
                 name="content"
                 variant="outlined"
                 label="Content"
                 fullWidth
                 value={recipeData.content}
-                onChange={(e) =>
+                onChange={(e) =>{
                   setRecipeData({ ...recipeData, content: e.target.value })
+                }
+                  
                 }
               />
             </Grid>
