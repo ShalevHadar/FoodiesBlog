@@ -8,13 +8,11 @@ export default function Recipes() {
 
   const url = "http://localhost:5000/posts";
 
-  
-
   useEffect(() => {
       axios.get(url).then((response) => {
         setItems(response.data);
       });
-    },[items.length])
+    },[items])
 
   return (
     <div>
