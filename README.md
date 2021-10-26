@@ -14,8 +14,6 @@ Frontend was mostly used with React.
 
 Build my own RESTful API deployed in MongoDB atlas.
 
-### `Used react properties`
-
 ![demo:](https://i.ibb.co/dGCz260/1.png)
 
 ![demo:](https://i.ibb.co/FY6SmjY/2.png)
