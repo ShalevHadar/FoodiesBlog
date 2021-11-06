@@ -1,5 +1,5 @@
 
-# Foodies Blog, a task to save all your recipes
+# Foodies Blog, a to save all your recipes
 
 A react app that saves your recipes in a convient location and show your
 everything you want !
